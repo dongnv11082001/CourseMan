@@ -53,8 +53,6 @@ public class CourseManProg {
     manager.addEnrolment(thanhlmReqEnrolment);
     manager.addEnrolment(thanhlmMprEnrolment);
 
-
-
     String data = manager.reportAssessment();
     System.out.println(data);
   }
