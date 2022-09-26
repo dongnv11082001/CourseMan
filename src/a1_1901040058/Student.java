@@ -41,8 +41,7 @@ public class Student {
   }
 
   private String generateId() {
-    year++;
-    return  LETTER_STUDENT + year;
+    return  LETTER_STUDENT + year++;
   }
 
   public String getId() {

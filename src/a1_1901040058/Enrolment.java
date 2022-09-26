@@ -1,6 +1,6 @@
 package a1_1901040058;
 
-public class Enrolment {
+public class Enrolment implements Comparable<Enrolment> {
   private Student student;
   private Module module;
   private float internalMark;
@@ -110,5 +110,10 @@ public class Enrolment {
             ", Examination Mark=" + examinationMark +
             ", Final Grade=" + finalGrade +
             '}';
+  }
+
+  @Override
+  public int compareTo(Enrolment o) {
+    return 0;
   }
 }
