@@ -1,7 +1,6 @@
 package a1_1901040058;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
@@ -54,14 +53,23 @@ public class EnrolmentManager {
   }
 
   public String reportAssessment() {
-    return report();
+    String report = "";
+    for (Enrolment e : enrolments) {
+      report += e.getStudent().toString() + ";" + e.getModule().toString() +
+              "; Internal Mark=" + e.getInternalMark() +
+              ", Examination Mark=" + e.getExaminationMark() +
+              ", Final Grade=" + e.getFinalGrade() +
+              "\n";
+    }
+
+    return report;
   }
 
   public void sort() {
     enrolments.sort(new Comparator<Enrolment>() {
       @Override
       public int compare(Enrolment o1, Enrolment o2) {
-        return o1.getStudent().getId().compareTo(o2.getStudent().getId());
+        return o2.getStudent().getId().compareTo(o1.getStudent().getId());
       }
     });
   }
