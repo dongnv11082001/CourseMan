@@ -56,7 +56,7 @@ marks)in the program
   (e) `reportAssessment(): String` – generates an assessment report of all the enrolments
 togetherwith their internal, exam marks and final grade
 
-  (f) `sort()` – sorts the current enrolments in the descending order of the student identifier
+  (f) `sort()` – sorts the current enrolments in the `descending` order of the student identifier
 
 4. Specify and implement the class, which is the main program class. This class
 has a method that performs the following tasks:
