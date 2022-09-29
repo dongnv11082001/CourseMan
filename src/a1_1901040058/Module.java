@@ -12,26 +12,15 @@ public class Module {
 
     public static Map<Integer, Integer> temp = new HashMap<>();
 
-    public Module(String name, int semester, int credits) {
-        if (!validateName(name)) {
-            System.out.println("Invalid module name");
+    public Module(String name, int semester, int credits) throws Exception {
+        if (!validateName(name) || !validateCredits(credits) || !validateSemester(semester)) {
+            throw new Exception("Invalid module name, credits, semester");
         } else {
             this.name = name;
-        }
-
-        if (!validateSemester(semester)) {
-            System.out.println("Invalid module semester");
-        } else {
             this.semester = semester;
-        }
-
-        if (!validateCredits(credits)) {
-            System.out.println("Invalid module credits");
-        } else {
             this.credits = credits;
+            this.code = generateCode(semester);
         }
-
-        this.code = generateCode(semester);
     }
 
     public String getCode() {

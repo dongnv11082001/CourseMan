@@ -9,7 +9,7 @@ public class Enrolment implements Comparable<Enrolment> {
 
   public Enrolment(Student student, Module module, float internalMark, float examinationMark) {
     if (!validateStudent(student) || !validateModule(module) || !validateInternalMark(internalMark) || !validateExaminationMark(examinationMark)) {
-      System.out.println("Invalid information");
+      System.err.println("Invalid student, module, internal mark, examination mark");
     } else {
       this.student = student;
       this.module = module;
