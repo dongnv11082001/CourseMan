@@ -38,6 +38,7 @@ public class EnrolmentManager {
                 && e.getModule().getName().equals(module.getName())) {
           e.setInternalMark((float) internalMark);
           e.setExaminationMark((float) examinationMark);
+          e.setFinalGrade(e.generateGrade());
         }
       }
     }

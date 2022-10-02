@@ -80,14 +80,14 @@ public class Enrolment {
   }
 
   private boolean validateInternalMark(float internalMark) {
-    return internalMark > 0;
+    return internalMark >= 0;
   }
 
   private boolean validateExaminationMark(float examinationMark) {
-    return examinationMark > 0;
+    return examinationMark >= 0;
   }
 
-  private char generateGrade() {
+  public char generateGrade() {
     double aggregateMark = 0.4 * internalMark + 0.6 * examinationMark;
 
     if (aggregateMark > 8) {
