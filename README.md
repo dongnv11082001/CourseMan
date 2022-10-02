@@ -59,7 +59,7 @@ togetherwith their internal, exam marks and final grade
   (f) `sort()` – sorts the current enrolments in the `descending` order of the student identifier
 
 4. Specify and implement the `CoureMan` class, which is the main program class. This class
-has a method that performs the following tasks:
+has a `main` method that performs the following tasks:
 
   (a) Initialise at least 5 modules (3 compulsory and 2 elective) and 5 students
 
